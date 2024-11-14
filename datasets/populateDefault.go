@@ -10,8 +10,14 @@ type name struct {
 	Last  string `json:"last"`
 }
 
+type image struct {
+	URL string `json:"url"`
+	// TODO : more fields? size?
+}
+
 type Datasets struct {
-	Names []name
+	Names  []name
+	Images []image
 }
 
 func read(filename string, schema interface{}) {
