@@ -1,0 +1,7 @@
+{
+    "name":"~name~",
+    "id": "~int~",
+    "id": "~int_5~", 
+    "image":"~image_cat~",
+    "bool":"~bool~",
+}
