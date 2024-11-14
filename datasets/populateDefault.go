@@ -3,6 +3,7 @@ package datasets
 import (
 	"encoding/json"
 	"os"
+	"sync"
 )
 
 type name struct {
@@ -11,7 +12,8 @@ type name struct {
 }
 
 type image struct {
-	URL string `json:"url"`
+	URL      string `json:"url"`
+	Category string `json:"category"`
 	// TODO : more fields? size?
 }
 
@@ -20,7 +22,9 @@ type Datasets struct {
 	Images []image
 }
 
-func read(filename string, schema interface{}) {
+// TODO: Expose this publicly so that user can have their own custom datasets.
+func read(filename string, schema interface{}, wg *sync.WaitGroup) {
+	defer wg.Done()
 	data, err := os.ReadFile(filename)
 	if err != nil {
 		panic("Couldnt open file " + filename)
@@ -32,8 +36,13 @@ func read(filename string, schema interface{}) {
 
 }
 
+// TODO: Add concurrency to this so it concurrently reads the thingys
 func PopulateAll() *Datasets {
 	dataset := Datasets{}
-	read("datasets/names.json", &dataset.Names)
+	var wg sync.WaitGroup
+	wg.Add(2)
+	go read("datasets/data/names.json", &dataset.Names, &wg)
+	go read("datasets/data/images.json", &dataset.Images, &wg)
+	wg.Wait()
 	return &dataset
 }

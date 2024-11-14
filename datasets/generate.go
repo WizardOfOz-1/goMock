@@ -14,7 +14,9 @@ func (d *Datasets) getRandom(thing string) string {
 	case "int":
 		return strconv.Itoa(rand.Intn(69))
 	case "img":
-		return "https://www.yomama.com"
+		current := rand.Intn(len(d.Images))
+        // Images Has A Category Field Too 
+		return fmt.Sprintf("%s", d.Images[current].URL)
 	case "bool":
 		if rand.Intn(2) == 1 {
 			return "true"

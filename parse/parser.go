@@ -11,5 +11,4 @@ func ParseInput() string {
 		panic("Couldn't read schema")
 	}
 	return string(schema)
-
 }
