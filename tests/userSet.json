@@ -1,0 +1,12 @@
+{
+    "name": ["John Doe", "Jane Doe", "Alice Johnson", "Bob Smith"],
+    "email": ["johndoe@example.com", "janedoe@example.com", "alice.johnson@example.org", "bob.smith@example.net"],
+    "username": ["johnny", "jane_d", "aliceJ", "bob_the_builder"],
+    "phone": ["123-456-7890", "987-654-3210", "555-123-4567", "444-555-6666"],
+    "address": ["123 Main St", "456 Elm St", "789 Oak St", "101 Pine St"],
+    "dob": ["1990-01-01", "1985-12-15", "2000-07-23", "1995-03-11"],
+    "roles": ["admin", "user", "moderator", "guest"],
+    "status": ["active", "inactive", "active", "pending"],
+    "age": ["19", "30", "59", "60"]
+}
+

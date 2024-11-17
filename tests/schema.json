@@ -1,0 +1,47 @@
+{
+  "status": "~status~",
+  "data": {
+    "user": {
+      "id": "~id~",
+      "name": "~name~",
+      "email": "~email~",
+      "username": "~username~",
+      "age": "~age~",
+      "address": {
+        "street": "~street~",
+        "city": "~city~",
+        "state": "IL",
+        "zipcode": "~zip~",
+        "country": "~country~"
+      },
+      "is_active": "~bool~",
+      "created_at": "~time~"
+    },
+    "preferences": {
+      "language": "~lang~",
+      "currency": "~currency~",
+      "notifications": {
+        "email": "~bool~",
+        "sms": "~bool~",
+        "push": "~bool~"
+      }
+    },
+    "order_history": [
+      {
+        "order_id": "~id~",
+        "product": "~product_name~",
+        "amount": "~price~",
+        "currency": "~currency~",
+        "purchase_date": "~time~"
+      },
+      {
+        "order_id": "~id~",
+        "product": "~product_name~",
+        "amount": "~price~",
+        "currency": "~currency~",
+        "purchase_date": "~time~"
+      }
+    ]
+  }
+}
+

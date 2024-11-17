@@ -1,0 +1,10 @@
+{
+    "name": "~name~",
+    "email": "~email~",
+    "username": "~username~",
+    "phone": "~phone~",
+    "address": "~address~",
+    "dob": "~dob~",
+    "roles": "~roles~",
+    "status": "~status~"
+}
